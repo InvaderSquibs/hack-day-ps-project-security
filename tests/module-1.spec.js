@@ -64,9 +64,20 @@ describe('#Module-1', () => {
       const fileName = '1.5.txt'
       const fileContent = await getFileContents(fileName)
 
-      const expected = 'c81e728d9d4c2f636f067f89cc14862c'
+      const expected = 'cvX2JJa4CFALtqS87jk27qwqGhBM9plV'
 
-      expect(md5(fileContent)).to.eql(expected)
+      expect(fileContent).to.eql(expected)
+    })
+  })
+
+  describe('#1.6.txt', () => {
+    it('has the correct uuid', async () => {
+      const fileName = '1.6.txt'
+      const fileContent = await getFileContents(fileName)
+
+      const expected = 'UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR'
+
+      expect(fileContent).to.eql(expected)
     })
   })
 })
